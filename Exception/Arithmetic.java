@@ -1,7 +1,8 @@
 package com.mphasis;
 
-import sun.rmi.runtime.Log;
-
+/*
+ *   perfoming logger and assert and printing message
+ */
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -11,7 +12,7 @@ public class Arithmetic {
     }
 
 }
-class Main2{
+class TestArithmetic{
     public static void main(String[] args) {
         Logger logger= Logger.getLogger(Arithmetic.class.getName());
         System.out.println(args[0]+args[1]);

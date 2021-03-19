@@ -2,9 +2,13 @@ package com.mphasis.main;
 
 import java.util.concurrent.*;
 
+/*
+ *  implementing cyclicbarrier and performing Task
+ */
 public class CyclicBarrierExample implements Runnable {
     CyclicBarrier barrier;
-
+	
+	//constructor
     public CyclicBarrierExample(CyclicBarrier barrier) {
         this.barrier = barrier;
     }
@@ -28,14 +32,15 @@ public class CyclicBarrierExample implements Runnable {
     }
 }
 
-class Main2{
+class TestCyclicBarrier{
     public static void main(String[] args) throws InterruptedException, ExecutionException {
 
         int coreCount = Runtime.getRuntime().availableProcessors();
         ExecutorService service = Executors.newFixedThreadPool(coreCount);
-        CyclicBarrier barrier = new CyclicBarrier(3);
-
-        service.submit(new CyclicBarrierExample(barrier)); // three task
+        
+	//create three task
+	CyclicBarrier barrier = new CyclicBarrier(3);
+        service.submit(new CyclicBarrierExample(barrier)); 
         service.submit(new CyclicBarrierExample(barrier));
         service.submit(new CyclicBarrierExample(barrier));
 

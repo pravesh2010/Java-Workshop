@@ -2,6 +2,9 @@ package com.mphasis.main;
 
 import static org.junit.Assert.*;
 
+/*
+ *  Creating junit tescase and perform unit testing
+ */
 public class ArithmeticTest {
 
     @org.junit.Test

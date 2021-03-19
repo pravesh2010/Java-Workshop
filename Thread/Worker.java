@@ -7,6 +7,9 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
+/*
+ *  creating two list and performing synchronization on object to remove racecondition
+ */
 public class Worker implements Runnable {
     private Random random = new Random();
     private final Object lock1 = new Object();

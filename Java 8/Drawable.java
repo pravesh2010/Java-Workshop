@@ -1,5 +1,8 @@
 package com.mphasis.java8;
 
+/*
+ *  Creating Functional Inerface and use with lambda expression
+ */
 @FunctionalInterface
 public interface Drawable {
     void draw();

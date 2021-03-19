@@ -1,5 +1,8 @@
 package com.mphasis.java8;
 
+/*
+ *  Creating Inerface and use with lambda expression
+ */
 public interface Printer {
     void print(String str, int number);
 }

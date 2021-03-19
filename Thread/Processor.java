@@ -4,6 +4,9 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
+/*
+ *  implementing executerservice to create fixed thread pool
+ */
 public class Processor implements Runnable{
 
     private int id;
@@ -23,7 +26,7 @@ public class Processor implements Runnable{
 
     public static void main(String[] args) {
 
-
+	//creating two task
         ExecutorService executor = Executors.newFixedThreadPool(2);
         for (int i = 0; i < 2; i++) {
             executor.submit(new Processor(i));

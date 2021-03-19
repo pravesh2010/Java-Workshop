@@ -1,5 +1,8 @@
 package com.mphasis.main;
 
+/*
+ *  creating synchronization block to remove race condition
+ */
 public class SynchronizeBlockPrintDemo extends Thread {
     public void printCount() {
         try {
@@ -18,7 +21,7 @@ public class SynchronizeBlockPrintDemo extends Thread {
     }
 
 }
-class Test3{
+class TestSynchronizeBlockPrintDemo {
     public static void main(String args[]) {
         SynchronizeBlockPrintDemo PD = new SynchronizeBlockPrintDemo();
         Thread t1 = new Thread(PD );

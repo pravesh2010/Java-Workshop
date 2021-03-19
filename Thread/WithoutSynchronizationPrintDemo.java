@@ -1,5 +1,8 @@
 package com.mphasis.main;
 
+/*
+ *  example on without synchronization where no guarantee of thread execution order
+ */
 public class WithoutSynchronizationPrintDemo extends Thread {
     public void printCount() {
         try {

@@ -5,10 +5,14 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Phaser;
 
+/*
+ *  implementing phaser to create synchronization barrier
+ */
 public class PhaserExample implements Runnable{
 
     Phaser phaser;
 
+	//constructor
     public PhaserExample(Phaser phaser) {
         this.phaser = phaser;
     }
@@ -26,12 +30,14 @@ public class PhaserExample implements Runnable{
     }
 
 }
-class  Main3{
+class  TestPhaser{
     public static void main(String[] args) throws InterruptedException, ExecutionException {
+	
         int coreCount = Runtime.getRuntime().availableProcessors();
         ExecutorService service = Executors.newFixedThreadPool(coreCount);
-        Phaser phaser= new Phaser(4);
-
+        
+	//creating task
+	Phaser phaser= new Phaser(4);
         service.submit(new PhaserExample(phaser));
         service.submit(new PhaserExample(phaser));
         service.submit(new PhaserExample(phaser));

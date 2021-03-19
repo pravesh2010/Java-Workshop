@@ -5,6 +5,9 @@ import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/*
+ *  Creating List with person class and performing Stream Operation with collectors
+ */
 public class Person {
     int id;
     String name;

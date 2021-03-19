@@ -1,5 +1,8 @@
 package com.mphasis.main;
 
+/*
+ *  creating synchronize on run method and remove race condition
+ */
 public class SynchronizeMethodPrintDemo extends Thread{
     public void printCount() {
         try {
@@ -15,7 +18,7 @@ public class SynchronizeMethodPrintDemo extends Thread{
         System.out.println("Thread " + Thread.currentThread().getName() + " exiting.");
     }
 }
-class Test1{
+class TestSynchronizeMethodPrintDemo {
     public static void main(String args[]) {
         SynchronizeMethodPrintDemo PD1 = new SynchronizeMethodPrintDemo();
         Thread t1 = new Thread(PD1 );

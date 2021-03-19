@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+/*
+ *  creating arraylist and using synchronization block on object
+ */
 public class SynchronizeBlocks {
     private Random random = new Random();
 

@@ -1,5 +1,8 @@
 package com.mphasis.main;
 
+/*
+ *  using main thread and create two threads and iterate through for loop
+ */
 public class Runner implements Runnable {
 
     @Override
@@ -10,6 +13,8 @@ public class Runner implements Runnable {
     }
 
     public static void main(String[] args) {
+	
+	//getting current thread
         Thread mainThread= Thread.currentThread();
         Runner runner= new Runner();
         Thread thread1=new Thread(runner);
